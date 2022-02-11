@@ -1,5 +1,5 @@
 from py5paisa import FivePaisaClient
-from . import inf
+import inf
 cred={
     "APP_NAME": inf.APP_NAME,
     "APP_SOURCE": inf.APP_SOURCE,
@@ -8,3 +8,7 @@ cred={
     "USER_KEY": inf.USER_KEY,
     "ENCRYPTION_KEY": inf.ENCRYPTION_KEY,
     }
+
+client = FivePaisaClient(email=inf.email, passwd=inf.passwd, dob=inf.dob,cred=cred)
+client.login()
+# print(client.margin())
